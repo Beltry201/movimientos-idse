@@ -10,13 +10,14 @@ Sistema para procesar movimientos de empleados y generar archivos compatibles co
 - ✅ Tests comprehensivos
 - ✅ Logging detallado
 - ✅ Manejo de errores robusto
+- ✅ Validación granular con reportes detallados
 
 ## Instalación
 
 ```bash
 # Clonar el repositorio
-git clone <repository-url>
-cd movimientos_idse
+git clone https://github.com/Beltry201/movimientos-idse.git
+cd movimientos-idse
 
 # Crear entorno virtual
 python -m venv venv
@@ -33,9 +34,6 @@ pip install -r requirements.txt
 ```bash
 # Ejecutar sistema interactivo
 python sistema_idse.py
-
-# O ejecutar directamente
-python -m src.main
 ```
 
 ### Funcionalidades disponibles
@@ -54,7 +52,37 @@ python -m src.main
 python sistema_idse.py
 
 # Seleccionar opción 1 para procesar un archivo JSON
-# Ingresar la ruta del archivo: examples/input-ejemplo.json
+# Ingresar la ruta del archivo: examples/input-ejemplo-2.json
+```
+
+### Ejemplo de salida
+
+```
+✅ PROCESAMIENTO COMPLETADO
+==================================================
+📊 Estadísticas:
+   • Empresas procesadas: 2
+   • Movimientos totales: 20
+   • Movimientos válidos: 17
+   • Movimientos inválidos: 3
+   • Archivos generados: 10
+
+❌ ERRORES DE VALIDACIÓN DETECTADOS:
+--------------------------------------------------
+🏢 Empresa: A1234567890
+   📋 Movimiento 7:
+      ❌ Tipo: nss_invalido
+      📝 Campo: empleado.nss
+      💾 Valor: 5554567890
+      ⚠️  Error: El NSS debe tener exactamente 11 dígitos (actual: 10)
+
+📁 Archivos IDSE generados:
+   • IDSE_ALT_012024_A1234567890.txt
+     - Tipo: alta
+     - Periodo: 012024
+     - Registro Patronal: A1234567890
+     - Movimientos: 1
+     - Tamaño: 44 bytes
 ```
 
 ## Tests
@@ -68,19 +96,24 @@ pytest --cov=src
 
 # Tests específicos
 pytest tests/unit/
-pytest tests/integration/
 ```
 
 ## Estructura del Proyecto
 
 ```
-src/
-├── models/          # Modelos Pydantic
-├── validators/      # Lógica de validación
-├── services/        # Servicios de procesamiento
-├── utils/           # Utilidades
-├── config/          # Configuración
-└── main.py          # Punto de entrada
+movimientos-idse/
+├── src/
+│   ├── models/          # Modelos Pydantic (Empleado, Empresa, Movimiento)
+│   ├── validators/      # Lógica de validación con reportes detallados
+│   ├── services/        # Servicios de procesamiento y generación de archivos
+│   ├── utils/           # Utilidades (fechas, formato)
+│   └── config/          # Configuración y constantes
+├── tests/               # Tests unitarios
+├── examples/            # Archivos JSON de ejemplo
+├── output/              # Archivos IDSE generados
+├── sistema_idse.py      # Interfaz de consola principal
+├── requirements.txt     # Dependencias del proyecto
+└── README.md           # Documentación
 ```
 
 ## Reglas de Validación
@@ -116,6 +149,41 @@ Cada línea tiene exactamente 44 caracteres:
 - Posiciones 25-26: Razón salida (01-05 para bajas, 00 para otros)
 - Posiciones 27-34: Fecha DDMMYYYY
 - Posiciones 35-44: SBC sin decimales, pad con ceros
+
+## Validación Robusta
+
+El sistema implementa validación robusta que:
+
+- ✅ **Procesa movimientos válidos** incluso cuando hay errores
+- ✅ **Reporta errores detallados** con ubicación específica
+- ✅ **Continúa el procesamiento** sin interrumpir por errores
+- ✅ **Genera archivos** para movimientos válidos
+- ✅ **Maneja excepciones** de forma elegante
+
+### Ejemplo de reporte de errores
+
+```
+❌ ERRORES DE VALIDACIÓN DETECTADOS:
+--------------------------------------------------
+🏢 Empresa: A1234567890
+   📋 Movimiento 7:
+      ❌ Tipo: nss_invalido
+      📝 Campo: empleado.nss
+      💾 Valor: 5554567890
+      ⚠️  Error: El NSS debe tener exactamente 11 dígitos (actual: 10)
+   📋 Movimiento 8:
+      ❌ Tipo: fecha_invalida
+      📝 Campo: fecha_movimiento
+      💾 Valor: 2024-02-30
+      ⚠️  Error: La fecha debe tener formato YYYY-MM-DD
+```
+
+## Archivos de Ejemplo
+
+El proyecto incluye archivos JSON de ejemplo:
+
+- `examples/input-ejemplo.json`: Ejemplo básico con movimientos válidos
+- `examples/input-ejemplo-2.json`: Ejemplo con errores de validación para demostrar el sistema
 
 ## Contribución
 
