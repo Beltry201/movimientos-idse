@@ -33,7 +33,6 @@ class MovimientoValidator:
             try:
                 empresa = EmpresaBase(**empresa_data)
             except Exception as e:
-                # Si la empresa no se puede parsear, registrar error y continuar
                 error_info = {
                     "tipo": "empresa_invalida",
                     "empresa_idx": empresa_idx,

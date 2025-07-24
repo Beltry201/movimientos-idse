@@ -64,31 +64,37 @@ class SistemaIDSE:
         print("=" * 30)
     
     def procesar_archivo_json(self):
-        """Procesar archivo JSON ingresado por el usuario"""
+        """Procesar archivo JSON ingresado por el usuario o elegir ejemplo"""
         print("\n📊 PROCESAR ARCHIVO JSON")
         print("-" * 30)
-        
-        # Solicitar ruta del archivo
-        ruta_archivo = input("📂 Ingrese la ruta del archivo JSON: ").strip()
-        
+        print("1. Procesar archivo de ejemplo 1 (examples/input-ejemplo.json)")
+        print("2. Procesar archivo de ejemplo 2 (examples/input-ejemplo-2.json)")
+        print("3. Ingresar ruta manualmente")
+        opcion = input("Seleccione una opción: ").strip()
+
+        if opcion == "1":
+            ruta_archivo = "examples/input-ejemplo.json"
+        elif opcion == "2":
+            ruta_archivo = "examples/input-ejemplo-2.json"
+        elif opcion == "3":
+            ruta_archivo = input("📂 Ingrese la ruta del archivo JSON: ").strip()
+        else:
+            print("❌ Opción inválida")
+            return
+
         if not ruta_archivo:
             print("❌ No se ingresó una ruta válida")
             return
-        
+
         if not os.path.exists(ruta_archivo):
             print(f"❌ El archivo {ruta_archivo} no existe")
             return
-        
+
         try:
-            # Leer y procesar archivo
             with open(ruta_archivo, 'r', encoding='utf-8') as f:
                 contenido = f.read()
-            
             resultado = self.processor.procesar_archivo_json(contenido)
-            
-            # Mostrar resultados
             self.mostrar_resultados_procesamiento(resultado)
-            
         except Exception as e:
             print(f"❌ Error procesando archivo: {e}")
             logger.exception("Error en procesamiento de archivo")

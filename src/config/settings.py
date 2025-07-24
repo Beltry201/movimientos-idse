@@ -10,10 +10,6 @@ class Settings(BaseSettings):
     app_version: str = "1.0.0"
     app_description: str = "Sistema de Procesamiento de Movimientos IDSE para el IMSS"
     
-    # Configuración del servidor
-    host: str = "0.0.0.0"
-    port: int = 8000
-    reload: bool = True
     
     # Configuración de logging
     log_level: str = "INFO"
@@ -28,7 +24,6 @@ class Settings(BaseSettings):
     max_empresas_por_request: int = 100
     
     class Config:
-        env_file = ".env"
         case_sensitive = False
 
 

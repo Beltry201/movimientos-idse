@@ -32,7 +32,7 @@ class MovimientoBase(BaseModel):
 class Movimiento(MovimientoBase):
     """Modelo para representar un movimiento de empleado en el sistema IDSE."""
     
-    empleado: Empleado  # Usar el modelo con validaciones estrictas
+    empleado: Empleado
     
     @validator('tipo')
     def validar_tipo(cls, v):
