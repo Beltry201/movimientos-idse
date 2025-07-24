@@ -1,0 +1,68 @@
+{
+  "empresa": [
+    {
+      "registro_patronal": "B5510768108",
+      "nombre": "Tecnología Buk S.A. de C.V.",
+      "rfc": "TBU050525AB1",
+      "movimientos": [
+        {
+          "tipo": "baja",
+          "motivo": "renuncia",
+          "empleado": {
+            "nss": "12345678901",
+            "nombre": "Juan Pérez García",
+            "curp": "PEGJ850301HDFRRN01"
+          },
+          "fecha_movimiento": "2023-03-15"
+        },
+        {
+          "tipo": "alta",
+          "empleado": {
+            "nss": "09876543210",
+            "nombre": "María González López",
+            "curp": "GOLM900815MDFNPR04"
+          },
+          "fecha_movimiento": "2023-03-01",
+          "sbc": 1120.0
+        },
+        {
+          "tipo": "modificacion",
+          "empleado": {
+            "nss": "11223344556",
+            "nombre": "Carlos Rodríguez Martínez",
+            "curp": "ROMC750512HDFRRN02"
+          },
+          "fecha_movimiento": "2023-03-10",
+          "sbc": 1500.0
+        }
+      ]
+    },
+    {
+      "registro_patronal": "A1234567890",
+      "nombre": "Empresa Ejemplo S.A. de C.V.",
+      "rfc": "EEM123456789",
+      "movimientos": [
+        {
+          "tipo": "alta",
+          "empleado": {
+            "nss": "99887766554",
+            "nombre": "Ana López Silva",
+            "curp": "LOSA820630MDFRRN03"
+          },
+          "fecha_movimiento": "2023-03-05",
+          "sbc": 1800.0
+        },
+        {
+          "tipo": "baja",
+          "motivo": "despido",
+          "empleado": {
+            "nss": "11223344557",
+            "nombre": "Roberto Sánchez Díaz",
+            "curp": "SADR700815HDFRRN04"
+          },
+          "fecha_movimiento": "2023-03-20"
+        }
+      ]
+    }
+  ]
+} 

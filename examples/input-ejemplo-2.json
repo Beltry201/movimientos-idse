@@ -1,0 +1,215 @@
+{
+  "empresa": [
+    {
+      "registro_patronal": "A1234567890",
+      "nombre": "Soluciones Digitales MX S.A. de C.V.",
+      "rfc": "SDM240101T10",
+      "movimientos": [
+        {
+          "tipo": "alta",
+          "empleado": {
+            "nss": "12345678901",
+            "nombre": "Luis Mart\u00ednez G\u00f3mez",
+            "curp": "MAGL900101HDFRNS09"
+          },
+          "fecha_movimiento": "2024-01-01",
+          "sbc": 980.5
+        },
+        {
+          "tipo": "modificacion",
+          "empleado": {
+            "nss": "12345678901",
+            "nombre": "Luis Mart\u00ednez G\u00f3mez"
+          },
+          "fecha_movimiento": "2024-03-15",
+          "sbc": 1020.75
+        },
+        {
+          "tipo": "baja",
+          "motivo": "renuncia",
+          "empleado": {
+            "nss": "22345678901",
+            "nombre": "Erika S\u00e1nchez Le\u00f3n",
+            "curp": "SALE920215MDFLNR01"
+          },
+          "fecha_movimiento": "2024-03-10",
+          "sbc": 0
+        },
+        {
+          "tipo": "alta",
+          "empleado": {
+            "nss": "33345678901",
+            "nombre": "Carlos Hern\u00e1ndez Ruiz",
+            "curp": "HERC890620HDFRRL06"
+          },
+          "fecha_movimiento": "2024-03-02",
+          "sbc": 1500
+        },
+        {
+          "tipo": "modificacion",
+          "empleado": {
+            "nss": "33345678901",
+            "nombre": "Carlos Hern\u00e1ndez Ruiz"
+          },
+          "fecha_movimiento": "2024-04-20",
+          "sbc": 1580
+        },
+        {
+          "tipo": "alta",
+          "empleado": {
+            "nss": "44445678901",
+            "nombre": "Daniela L\u00f3pez Ram\u00edrez",
+            "curp": "LORD910312MDFRMR03"
+          },
+          "fecha_movimiento": "2024-03-05",
+          "sbc": 1080.75
+        },
+        {
+          "tipo": "baja",
+          "motivo": "despido",
+          "empleado": {
+            "nss": "44445678901",
+            "nombre": "Daniela L\u00f3pez Ram\u00edrez",
+            "curp": "LORD910312MDFRMR03"
+          },
+          "fecha_movimiento": "2024-03-30",
+          "sbc": 0
+        },
+        {
+          "tipo": "alta",
+          "empleado": {
+            "nss": "5554567890",
+            "nombre": "Fernando Castillo Mej\u00eda",
+            "curp": "CAMF850125HDFRNJ04"
+          },
+          "fecha_movimiento": "2024-03-01",
+          "sbc": 1120
+        },
+        {
+          "tipo": "modificacion",
+          "empleado": {
+            "nss": "66645678901",
+            "nombre": "Sof\u00eda Ram\u00edrez Cuevas"
+          },
+          "fecha_movimiento": "2024-02-30",
+          "sbc": 1450.25
+        },
+        {
+          "tipo": "modificacion",
+          "empleado": {
+            "nss": "12345678901",
+            "nombre": "Luis Mart\u00ednez G\u00f3mez"
+          },
+          "fecha_movimiento": "2024-03-28",
+          "sbc": 1100.0
+        }
+      ]
+    },
+    {
+      "registro_patronal": "Z9876543210",
+      "nombre": "Innovatek del Norte S.A. de C.V.",
+      "rfc": "IDN2402013Z4",
+      "movimientos": [
+        {
+          "tipo": "alta",
+          "empleado": {
+            "nss": "77745678901",
+            "nombre": "Alberto Reyes Torres",
+            "curp": "RETA850321HDFLNS07"
+          },
+          "fecha_movimiento": "2024-03-01",
+          "sbc": 1000.25
+        },
+        {
+          "tipo": "modificacion",
+          "empleado": {
+            "nss": "77745678901",
+            "nombre": "Alberto Reyes Torres"
+          },
+          "fecha_movimiento": "2024-03-20",
+          "sbc": 1050.75
+        },
+        {
+          "tipo": "baja",
+          "motivo": "termino_contrato",
+          "empleado": {
+            "nss": "88845678901",
+            "nombre": "Julieta D\u00edaz Ortega",
+            "curp": "DIOJ880715MDFRRL02"
+          },
+          "fecha_movimiento": "2024-03-10",
+          "sbc": 0
+        },
+        {
+          "tipo": "alta",
+          "empleado": {
+            "nss": "99945678901",
+            "nombre": "Javier Romero N\u00fa\u00f1ez",
+            "curp": "RONJ900228HDFLMR01"
+          },
+          "fecha_movimiento": "2024-03-02",
+          "sbc": 1325.4
+        },
+        {
+          "tipo": "modificacion",
+          "empleado": {
+            "nss": "99945678901",
+            "nombre": "Javier Romero N\u00fa\u00f1ez"
+          },
+          "fecha_movimiento": "2024-03-18",
+          "sbc": 1350.0
+        },
+        {
+          "tipo": "alta",
+          "empleado": {
+            "nss": "11145678901",
+            "nombre": "Paula Cordero Salinas",
+            "curp": "COSP950618MDFRSL05"
+          },
+          "fecha_movimiento": "2024-03-05",
+          "sbc": 1250
+        },
+        {
+          "tipo": "baja",
+          "motivo": "muerte",
+          "empleado": {
+            "nss": "11145678901",
+            "nombre": "Paula Cordero Salinas",
+            "curp": "COSP950618MDFRSL05"
+          },
+          "fecha_movimiento": "2024-03-25",
+          "sbc": 0
+        },
+        {
+          "tipo": "baja",
+          "motivo": "abandono",
+          "empleado": {
+            "nss": "11245678901",
+            "nombre": "Mario Ortega Pe\u00f1a",
+            "curp": "OPEM850102HDFRML08"
+          },
+          "fecha_movimiento": "2024-02-15",
+          "sbc": 0
+        },
+        {
+          "tipo": "modificacion",
+          "empleado": {
+            "nss": "11345678901",
+            "nombre": "Fernanda Mena Cruz"
+          },
+          "fecha_movimiento": "2024-03-22",
+          "sbc": 0
+        },
+        {
+          "tipo": "modificacion",
+          "empleado": {
+            "nss": "99945678901",
+            "nombre": "Javier Romero N\u00fa\u00f1ez"
+          },
+          "fecha_movimiento": "2024-05-28",
+          "sbc": 1400.0
+        }
+      ]
+    }
+  ]
+}
